@@ -1,6 +1,3 @@
-from getpass import getpass
-import json
-
 from pyasn1.codec.ber import encoder, decoder
 from impacket.krb5.kerberosv5 import getKerberosTGT, getKerberosTGS
 from impacket.krb5.types import KerberosTime, Principal, Ticket
@@ -30,7 +27,9 @@ def TGSTicket2hashcat(TGSResponse):
 	return '$krb5tgs$%s$*%s$%s$spn*$%s$%s\r\n' % (tgs_encryption_type,tgs_name_string,tgs_realm, tgs_checksum.encode('hex'), tgs_encrypted_data2.encode('hex') )
 
 if __name__ == '__main__':
-
+	from getpass import getpass
+	import json
+	
 	user       = ""
 	password   = getpass()
 	AD_address = '' #hostname or ip os the domain controller
