@@ -1,3 +1,5 @@
+# THIS SCRIPT  IS OBSOLETE, AND SUPERSEEDED BY THE [KERBEROAST](https://github.com/skelsec/kerberoast) PACKAGE
+
 # PyKerberoast
 Implementing Kerberoast attack fully in python
 
